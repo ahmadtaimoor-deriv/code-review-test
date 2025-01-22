@@ -16,7 +16,7 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
-            const message = '@sourcery-ai';
+            const message = '@sourcery-ai review';
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
