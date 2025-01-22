@@ -16,18 +16,7 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
-            const prAuthor = context.payload.pull_request.user.login;
-            
-            const message = `👋 Hey @${prAuthor}!
-            
-            Thanks for the PR! A new code change has been detected.
-            
-            Please ensure:
-            - All tests are passing
-            - Code follows project style guidelines
-            - Documentation is updated if needed
-            
-            Your PR will be reviewed soon. 🚀`;
+            const message = '@sourcery-ai';
             
             await github.rest.issues.createComment({
               owner: context.repo.owner,
